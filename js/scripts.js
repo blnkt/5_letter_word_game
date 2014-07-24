@@ -1,10 +1,8 @@
-var fiveLetterWordGame = function(referenceWord, guessWord) {
+var fiveLetterWordGame = function(secretWord, guessWord) {
   var score = 0;
-  var referenceLetters = referenceWord.split("");
-  var guessLetters = guessWord.split("");
-  referenceLetters.forEach(function(referenceLetter) {
-  	guessLetters.forEach(function(guessLetter) {
-  		if (referenceLetter === guessLetter) {
+  secretWord.split("").forEach(function(secretLetter) {
+  	guessWord.split("").forEach(function(guessLetter) {
+  		if (secretLetter === guessLetter) {
   			score++;
   		} else {
   		}
@@ -13,3 +11,6 @@ var fiveLetterWordGame = function(referenceWord, guessWord) {
   console.log(score);
   return score;
 }
+
+$(document).ready(function() {
+	

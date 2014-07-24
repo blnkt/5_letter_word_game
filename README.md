@@ -1,0 +1,1 @@
+The five letter word game is for two or more players.  The first player chooses a word and then the rest of the players guess what that word is.  Their only feedback is how many letters are shared between their guess and the secret word, and the words guess thus far.
