@@ -1,6 +1,14 @@
-.guessing {
+#guessing {
 	display: none;
 }
+#guesses {
+	display: none;
+}
+
+#win-message {
+	display: none;
+}
+
 .easy-mode {
 	display: none;
 }

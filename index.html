@@ -8,36 +8,32 @@
     <title>5LetterWordGame</title>
   </head>
   <body>
-  	<div class="container">
-  	  <h2>The 5-Letter Word Game</h2>
-  	  <div class="row-fluid">
+	  <div class="container">
+	  	<h2>The 5-Letter Word Game</h2>
+	  	<div class="row-fluid">
 		  <div class"col-md-3">
-		  	<div class="secreting">
 		      <h2>5-Letter Word</h2>
-			  <input type="text" class="form-control" id="secret-word" placeholder="Enter a 5-Letter Word">
-			  <br>
-			  <button class="btn btn-info" type="submit" id="submit-button">Enter the Secret Word</button>
-		    </div>
-		    <div class="guessing">
-		      	<!-- <h2>Guess the Secret Word</h2> -->
-		      <input type="text" class="form-control" id="guess-word" placeholder="Guess the word your friend picked">
-		      <br>
-		      <button class="btn btn-info" type="button" id="submit-button">Guess the Secret Word</button>
-			</div>
+		      <form id="secreting">
+				  <input type="text" class="form-control" id="secret-word" maxlength="5" placeholder="Enter a 5-Letter Word" required>
+				  <br>
+				  <button class="btn btn-info" type="submit" id="submit-button">Enter the Secret Word</button>
+			  </form>
+			  <div id="win-message">
+			  	<h3>You Win!  The secret word was<span class="current-secret-word"></span>.</h3>
+			  	<button class="btn btn-success" type="submit" id="submit-button">Play Again?</button>
+			  </div>
+			  <form id="guessing">
+				  <input type="text" class="form-control" id="guess-word" placeholder="Guess the word your friend picked">
+				  <br>
+				  <button class="btn btn-danger guess" type="button">Guess the Secret Word</button>
+			  </form>
 		  </div>
-	      <div class="col-md-3">
-	      	<div class="easy-mode">
+	      <div id="guesses" class="col-md-3">
 	      	<h2>Words guessed</h2>
-	      	<div>Your most recent guess shared <span class="score"></span> letters with the Secret Word</div>
-	      	<div>You have guessed <span class="guessedWords"></span>: <span class="pastScores"></span></div>
-		   	</div>
-		    <div class="hard-mode">
-		      <h2>Words guessed</h2>
-		      <div>Your most recent guess</div>
-		      <div>You have guessed <span class="guessedWords"></span></div>
-		  	</div>
-	  	  </div>
-  	  </div>
-    </div>
+	      	<div class="row"><span class="current-guess"></span> shares <span class="current-score"></span> letters with the Secret Word</div>
+	      	<div class="row">You have guessed: <ul id="guessed-words"></ul></div>
+		  </div>
+	    </div>
+	  </div>
   </body>
 </html>
