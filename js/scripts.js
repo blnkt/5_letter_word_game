@@ -26,15 +26,20 @@ $(document).ready(function() {
     yourGuessWord = $("input#guess-word").val();
 	var yourScore = fiveLetterWordGame(yourSecretWord, yourGuessWord);
 	$("#guesses").show();
-	alert(yourScore);
 	$(".current-guess").text(yourGuessWord.toUpperCase());
 	$(".current-score").text(yourScore);
     $("ul#guessed-words").append("<li>" + yourGuessWord.toUpperCase() + " : " + yourScore + "</li>");
     $("input#guess-word").val("");
+    $("#instructions").hide();
+
     if (yourGuessWord === yourSecretWord) {
       $("form#guessing").hide();
       $("#win-message").show();
       $(".current-secret-word").text(yourSecretWord);
+    }
+
+    if ($("li").size() > 10) {
+      $("#instructions").show();
     }
   event.preventDefault();
   })
