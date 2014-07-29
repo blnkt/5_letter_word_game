@@ -8,42 +8,40 @@
     <title>5LetterWordGame</title>
   </head>
   <body>
-	<div class="container">
+	  <div class="container">
 		<h2>The 5-Letter Word Game</h2>
-		<div id="instructions">
-		<h4>PLAYER ONE enters a SECRET 5-LETTER WORD for OTHER PLAYERS to GUESS.</h4>
-		<h4>Every GUESS learn the # of letters shared between YOUR GUESS and the SECRET WORD.</h4>  
-		<h4>KEEP GUESSING.</h4>
-	</div>
-	  	<br>
-	      <form id="secreting">
-	      	<div class="form-group form-group-sm col-sm-3">
-	      		<label class="control-label" for="secret-word">First pick a 5 letter word</label>
-			  <input type="text" class="form-control" id="secret-word" maxlength="5" placeholder="5-Letter Word" required>
-			  <br>
-			  <button class="btn btn-info" type="submit" id="submit-button">Set the Secret Word</button>
-			</div>
-		  </form>
+			<div id="instructions">
+				<h4>PLAYER ONE enters a SECRET 5-LETTER WORD for OTHER PLAYERS to GUESS.</h4>
+				<h4>Every GUESS learn the # of letters shared between YOUR GUESS and the SECRET WORD.</h4>  
+				<h4>KEEP GUESSING.</h4>
+		  </div>
+		  <br>
+	    <form id="secreting">
+	    	<div class="form-group form-group-sm col-sm-3">
+	    		<label class="control-label" for="secret-word">First pick a 5 letter word</label>
+		      <input type="text" class="form-control" id="secret-word" maxlength="5" placeholder="5-Letter Word" required>
+		      <br>
+		      <button class="btn btn-info" type="submit" id="submit-button">Set the Secret Word</button>
+		    </div>
+	    </form>
 		  <div id="win-message" class="col-sm-4">
 		  	<h4>The SECRET WORD is <span class="current-secret-word"></span>.  YOU WIN!</h4>
 		  	<button class="btn btn-success" type="submit" id="submit-button">Play Again?</button>
 		  </div>
-		<form id="guessing">
-		  <div class="form-group form-group-sm col-sm-3">
-		  	<label class="control-label" for="secret-word">Guess the secret word</label>
-			  <input type="text" class="form-control" id="guess-word" maxlength="5" placeholder="5-Letter Word" required>
-			  <br>
-			  <button class="btn btn-danger guess" type="button">Guess</button>
-	      </div>
-		</form>
-	      <div id="guesses" class="col-sm-6">
-	      	<h3>Words guessed</h3>
-	      	<div><span class="current-guess"></span> shares <span class="current-score"></span> letters with the Secret Word</div>
-	      	<br>
-	      	<div>You have guessed: <ul id="guessed-words"></ul></div>
-		  </div>
-<!-- 		  <div class="col-sm-3">stuff</div>
-		  <div class="col-sm-3">and things</div> -->
-	  </div>
+			<form id="guessing">
+			  <div class="form-group form-group-sm col-sm-3">
+			  	<label class="control-label" for="secret-word">Guess the secret word</label>
+				  <input type="text" class="form-control" id="guess-word" maxlength="5" placeholder="5-Letter Word" required>
+				  <br>
+				  <button class="btn btn-danger guess" type="button">Guess</button>
+			  </div>
+			</form>
+	    <div id="guesses" class="col-sm-6">
+		    <h3>Words guessed</h3>
+		    <div><span class="current-guess"></span> shares <span class="current-score"></span> letters with the Secret Word</div>
+		    <br>
+		    <div>You have guessed: <ul id="guessed-words"></ul></div>
+	    </div>
+    </div>
   </body>
 </html>

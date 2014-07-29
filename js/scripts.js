@@ -24,10 +24,10 @@ $(document).ready(function() {
   })
   $("form#guessing").submit(function() {
     yourGuessWord = $("input#guess-word").val();
-	var yourScore = fiveLetterWordGame(yourSecretWord, yourGuessWord);
-	$("#guesses").show();
-	$(".current-guess").text(yourGuessWord.toUpperCase());
-	$(".current-score").text(yourScore);
+	  var yourScore = fiveLetterWordGame(yourSecretWord, yourGuessWord);
+	  $("#guesses").show();
+	  $(".current-guess").text(yourGuessWord.toUpperCase());
+	  $(".current-score").text(yourScore);
     $("ul#guessed-words").append("<li>" + yourGuessWord.toUpperCase() + " : " + yourScore + "</li>");
     $("input#guess-word").val("");
     $("#instructions").hide();
@@ -41,8 +41,6 @@ $(document).ready(function() {
     if ($("li").size() > 10) {
       $("#instructions").show();
     }
-  event.preventDefault();
+    event.preventDefault();
   })
 })
-
-// <li><span class="past-guesses"></span> : <span class="pastScores"></span></li>
