@@ -13,7 +13,7 @@ Setup
 Dependencies (included in 5_letter_word_game )
   * [jquery](http://jquery.com/)
   * [bootstrap](http://getbootstrap.com/)
-  * [mocha](http://visionmedia.github.io/mocha/)
+  * [mocha](http://mochajs.org/)
   * [chai](http://chaijs.com/)
   
 Author
